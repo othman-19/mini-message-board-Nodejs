@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const express = require('express');
 
 const router = express.Router();
@@ -16,9 +17,13 @@ const messages = [
 ];
 
 /* GET home page. */
-// eslint-disable-next-line no-unused-vars
+
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Messages Board', messages: messages });
+  res.render('index', { title: 'Mini Messages board', messages });
+});
+
+router.get('/new', (req, res, next) => {
+  res.render('form');
 });
 
 module.exports = router;
