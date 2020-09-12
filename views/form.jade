@@ -1,9 +1,13 @@
-h1 Create new messages form
-form(method="POST", action="/new")
-  p Author
-  input(type="text", name="author")
-  p Message
-  input(type="text", name="message")
-  br
-  br
-  input(type="submit")
+extends layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/new")
+    p Author
+    input(type="text", name="author")
+    p Message
+    input(type="text", name="message")
+    br
+    br
+    input.submitBtn(type="submit")

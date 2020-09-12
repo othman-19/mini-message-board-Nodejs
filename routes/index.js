@@ -23,7 +23,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/new', (req, res, next) => {
-  res.render('form');
+  res.render('form', { title: 'New Messages Form' });
 });
 
 router.post('/new', (req, res, next) => {
