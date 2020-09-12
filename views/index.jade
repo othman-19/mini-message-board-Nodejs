@@ -2,7 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  
+  button(type="button")
+    a(href="./new") Create new message 
+  br
+  h2 Messages
   ul
   each message, i in messages 
     li= message.text
